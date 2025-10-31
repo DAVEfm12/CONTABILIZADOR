@@ -1,0 +1,133 @@
+:root {
+  --color-principal: #0ea5a4;
+  --color-boton: #0ea5a4;
+  --color-boton-rojo: #ef4444;
+  --color-fondo: #f4f6f8;
+  --color-card: #ffffff;
+  --sombra: 0 4px 10px rgba(0,0,0,0.1);
+  --borde: #e5e7eb;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--color-fondo);
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: var(--color-principal);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--color-card);
+  box-shadow: var(--sombra);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h2 {
+  color: var(--color-principal);
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--borde);
+}
+
+tfoot td {
+  font-weight: bold;
+  background: #f8f9fa;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 6px;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.botones {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--color-boton);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn.limpiar {
+  background: var(--color-boton-rojo);
+}
+
+.total-general {
+  text-align: right;
+  margin-top: 25px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+.total-general h3 {
+  margin: 0 0 5px 0;
+  color: var(--color-principal);
+}
+
+.total-general span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programa Contabilizador</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💰 CONTADOR DE EFECTIVO 💰</h1>
+    </header>
+
+    <div class="grid">
+      <!-- CONTADOR DE MONEDAS -->
+      <section class="card">
+        <h2>🪙 CONTADOR DE MONEDAS</h2>
+        <p>Introduce la cantidad de cada denominación y presiona <strong>Calcular monedas</strong>.</p>
+
+        <table id="tabla-monedas">
+          <thead>
+            <tr><th>DENOMINACIÓN</th><th>CANTIDAD</th><th>SUBTOTAL</th></tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr><td colspan="2">TOTAL:</td><td><span id="total-monedas">$0.00</span></td></tr>
+          </tfoot>
+        </table>
+
+        <div class="botones">
+          <button id="calc-monedas" class="btn">CALCULAR MONEDAS</button>
+          <button id="reset-monedas" class="btn limpiar">LIMPIAR</button>
+        </div>
+      </section>
+
+      <!-- CONTADOR DE BILLETES -->
+      <section class="card">
+        <h2>💵 CONTADOR DE BILLETES</h2>
+        <p>Introduce la cantidad de cada denominación y presiona <strong>Calcular billetes</strong>.</p>
+
+        <table id="tabla-billetes">
+          <thead>
+            <tr><th>DENOMINACIÓN</th><th>CANTIDAD</th><th>SUBTOTAL</th></tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr><td colspan="2">TOTAL:</td><td><span id="total-billetes">$0.00</span></td></tr>
+          </tfoot>
+        </table>
+
+        <div class="botones">
+          <button id="calc-billetes" class="btn">CALCULAR BILLETES</button>
+          <button id="reset-billetes" class="btn limpiar">LIMPIAR</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- TOTAL GENERAL -->
+    <div class="total-general">
+      <h3>TOTAL GENERAL:</h3>
+      <span id="total-general">$0.00</span>
+    </div>
+  </div>
+</body>
+</html>
