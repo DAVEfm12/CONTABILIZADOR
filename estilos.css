@@ -9,17 +9,22 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* ===== GENERAL ===== */
 body {
   background: var(--color-fondo);
   color: #111;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   max-width: 1000px;
+  width: 90%;              /* ocupa 90% del ancho del dispositivo */
   margin: 40px auto;
   padding: 20px;
+  background: transparent;
 }
 
 header {
@@ -33,12 +38,14 @@ h1 {
   margin: 0;
 }
 
+/* ===== GRID ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 20px;
 }
 
+/* ===== TARJETAS ===== */
 .card {
   background: var(--color-card);
   box-shadow: var(--sombra);
@@ -61,6 +68,7 @@ h1 {
   color: #555;
 }
 
+/* ===== TABLA ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -78,6 +86,7 @@ tfoot td {
   background: #f8f9fa;
 }
 
+/* ===== INPUTS ===== */
 input[type="number"] {
   width: 80px;
   padding: 6px;
@@ -86,6 +95,7 @@ input[type="number"] {
   text-align: center;
 }
 
+/* ===== BOTONES ===== */
 .botones {
   margin-top: 15px;
   display: flex;
@@ -113,6 +123,7 @@ input[type="number"] {
   background: var(--color-boton-rojo);
 }
 
+/* ===== TOTAL GENERAL ===== */
 .total-general {
   text-align: right;
   margin-top: 25px;
@@ -130,4 +141,30 @@ input[type="number"] {
 .total-general span {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+/* ======== MÓVILES ======== */
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 95%;             /* más centrado en pantallas pequeñas */
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* una sola columna */
+  }
+
+  input[type="number"] {
+    width: 100%;             /* los inputs ocupan todo el ancho */
+  }
+
+  .total-general {
+    text-align: center;
+  }
 }
