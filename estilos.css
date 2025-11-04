@@ -50,7 +50,7 @@ h1 {
   background: var(--color-card);
   box-shadow: var(--sombra);
   border-radius: 15px;
-  padding: 20px;
+  padding: -20px;
   transition: transform 0.2s ease;
 }
 
@@ -168,3 +168,4 @@ input[type="number"] {
     text-align: center;
   }
 }
+
